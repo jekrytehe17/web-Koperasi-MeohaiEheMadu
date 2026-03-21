@@ -1,0 +1,324 @@
+
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+        }
+
+        header {
+            background: transparent;
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 10px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+		
+		header.scrolled {
+            background: #FFFFFFBF; /* 🔥 warna muncul */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            padding: 15px 50px; /* sedikit lebih kecil */
+			color: black;
+        }
+		
+		header.scrolled nav a {
+            color: black; /* tetap putih (AMAN) */
+        }
+		
+		.logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            width: 40px;   /* ukuran logo */
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%; /* opsional: jadi bulat */
+        }
+		
+		.logo-container h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        nav a {
+		    color: white;
+            transition: 0.3s;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        /* 🔥 HERO BACKGROUND IMAGE */
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+              /*  url('https://images.unsplash.com/photo-1556740749-887f6717d7e4'); */
+			  url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            margin-bottom: 25px;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            border: none;
+            background: #0d6efd;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 80px 50px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+			color: #0f5c66;
+        }
+		
+		
+		
+		
+.gallery-section {
+    padding: 60px 50px;
+    background: #f1f3f2; /* warna mirip gambar */
+    color: #0f5c66;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 🔥 container scroll horizontal */
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.gallery-container2 {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.gallery-item {
+    min-width: 300px; /* ukuran card */
+    flex: 0 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* efek hover */
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-container2::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.satgas-section {
+    background: #e9eef2; /* abu terang seperti gambar */
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.satgas-section h2 {
+    color: #0f5c66;
+    margin-bottom: 50px;
+}
+
+/* 🔥 Grid logo */
+.satgas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+/* logo styling */
+.satgas-container img {
+    width: 100%;
+    max-width: 120px;
+    margin: auto;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+/* efek hover */
+.satgas-container img:hover {
+    transform: scale(1.1);
+	filter: grayscale(0%);
+}
+
+
+
+
+
+.manfaat-section {
+    background: #f1f3f2;
+    padding: 80px 50px;
+}
+
+.manfaat-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+/* KIRI */
+.manfaat-text {
+    flex: 1;
+}
+
+.manfaat-text h2 {
+    color: #0f5c66;
+    font-size: 32px;
+}
+
+/* KANAN */
+.manfaat-slider {
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+}
+
+.manfaat-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+/* CARD */
+.manfaat-card {
+    min-width: 300px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.manfaat-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.manfaat-card p {
+    padding: 15px;
+    color: #0f5c66;
+}
+
+/* DOT */
+.dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dots span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #bbb;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.dots span.active {
+    background: #0d6efd;
+}
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stats div {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+        }
+
+        footer {
+            background: #f1f3f2;
+            color: black;
+            text-align: center;
+            padding: 5px;
+        }
