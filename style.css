@@ -103,6 +103,7 @@
     flex-direction: column;
     width: 200px;
     display: none;
+	color: black;
   }
 
   .nav-menu.active {
