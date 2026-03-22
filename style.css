@@ -179,30 +179,21 @@ header.scrolled .brand span {
   }
 
   .satgas-container {
-    display: flex;
-    gap: 15px;
+    display: flex !important;
+    grid-template-columns: unset !important; /* 🔥 HAPUS GRID */
     overflow-x: auto;
+    gap: 10px;
     padding-bottom: 10px;
-  }
-
-  /* biar scroll lebih halus */
-  .satgas-container::-webkit-scrollbar {
-    display: none;
+	scroll-snap-type: x mandatory;
   }
 
   .satgas-container img {
-    width: 60px;
-    height: auto;
+    width: 50px !important;
+    max-width: none !important; /* 🔥 penting */
     flex-shrink: 0;
-    object-fit: contain;
-    opacity: 0.8;
-    transition: 0.3s;
+	scroll-snap-align: start;
   }
 
-  .satgas-container img:hover {
-    opacity: 1;
-    transform: scale(1.1);
-  }
 }
 
 
