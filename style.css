@@ -167,6 +167,42 @@ header.scrolled .brand span {
     width: 32px;
     height: 32px;
   }
+
+  .satgas-section {
+    padding: 30px 15px;
+  }
+
+  .satgas-section h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .satgas-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  /* biar scroll lebih halus */
+  .satgas-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .satgas-container img {
+    width: 60px;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+
+  .satgas-container img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
 }
 
 
