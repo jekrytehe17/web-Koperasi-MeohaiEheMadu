@@ -17,6 +17,16 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+	// ===== MENU TOGGLE =====
+		const toggle = document.querySelector(".menu-toggle");
+		const nav = document.querySelector(".nav-menu");
+
+		if (toggle && nav) {
+			toggle.addEventListener("click", function () {
+				nav.classList.toggle("active");	
+			});
+		}
+
     // ================= HEADER SCROLL =================
     window.addEventListener("scroll", function () {
         const header = document.querySelector("header");
@@ -71,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dots = document.querySelectorAll('.dots span');
 
     function updateSlider() {
-        const cardWidth = cards[0].offsetWidth + 20; // dynamic width
+        const cardWidth = cards[0].offsetWidth + 20;
         track.style.transform = `translateX(-${index * cardWidth}px)`;
 
         dots.forEach(dot => dot.classList.remove('active'));
