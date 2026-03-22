@@ -18,7 +18,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed;
+            position: relative;
             width: 100%;
             z-index: 1000;
         }
@@ -76,6 +76,7 @@
 .nav-menu {
   display: flex;
   gap: 20px;
+  z-index: 999;
 }
 
 /* MOBILE */
@@ -97,6 +98,22 @@
 
   .nav-menu.active {
     display: flex;
+  }
+  
+  .manfaat-wrapper {
+    flex-direction: column;
+  }
+
+  .manfaat-text {
+    text-align: center;
+  }
+
+  .manfaat-slider {
+    width: 100%;
+  }
+
+  .manfaat-card {
+    min-width: 80%;
   }
 }
 
@@ -262,8 +279,9 @@
 
 .manfaat-wrapper {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
+	flex-direction: column;
 }
 
 /* KIRI */
@@ -278,7 +296,7 @@
 
 /* KANAN */
 .manfaat-slider {
-    flex: 2;
+    flex: 1;
     overflow: hidden;
     position: relative;
 }
