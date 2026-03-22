@@ -43,24 +43,6 @@
 		    color: black;
 		}
 		
-		.logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-container img {
-            width: 40px;   /* ukuran logo */
-            height: 40px;
-            object-fit: cover;
-            border-radius: 50%; /* opsional: jadi bulat */
-        }
-		
-		.logo-container h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-            font-style: italic;
-        }
 
         nav a {
 		    color: white;
@@ -73,6 +55,57 @@
 		  max-width: 100%;
 		  height: auto;
 		}
+		
+		
+/* BRAND HEADER*/
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brand span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  color: white;
+  transition: 0.3s;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-text span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.brand-text small {
+  font-size: 11px;
+  opacity: 0.7;
+  color: white;
+}
+
+header.scrolled .brand span,
+header.scrolled .brand-text span,
+header.scrolled .brand-text small {
+  color: black;
+}
+
+/* SAAT SCROLL */
+header.scrolled .brand span {
+  color: black;
+}
 
 /* Untuk Navigation Agar Lebih Responsive (Mobile)*/
 /* NAVBAR MOBILE */
@@ -124,6 +157,15 @@
 
   .manfaat-card {
     min-width: 80%;
+  }
+  
+  .brand span {
+    font-size: 14px;
+  }
+
+  .brand img {
+    width: 32px;
+    height: 32px;
   }
 }
 
