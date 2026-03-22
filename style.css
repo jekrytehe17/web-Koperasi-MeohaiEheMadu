@@ -60,6 +60,47 @@
             text-decoration: none;
         }
 
+		img {
+		  max-width: 100%;
+		  height: auto;
+		}
+
+/* Untuk Navigation Agar Lebih Responsive (Mobile)*/
+/* NAVBAR MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+
         /* 🔥 HERO BACKGROUND IMAGE */
         .hero {
             height: 100vh;
@@ -112,7 +153,7 @@
 		
 		
 		
-		
+/* Galeri Section */		
 .gallery-section {
     padding: 60px 50px;
     background: #f1f3f2; /* warna mirip gambar */
@@ -169,8 +210,13 @@
     display: none;
 }
 
+.gallery-container,
+.gallery-container2 {
+  scroll-behavior: smooth;
+}
 
 
+/* SATUAN KERJA */
 .satgas-section {
     background: #e9eef2; /* abu terang seperti gambar */
     padding: 80px 50px;
@@ -245,11 +291,12 @@
 
 /* CARD */
 .manfaat-card {
-    min-width: 300px;
+    min-width: 280px;
     background: white;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	margin-right: 20px;
 }
 
 .manfaat-card img {
@@ -261,6 +308,12 @@
 .manfaat-card p {
     padding: 15px;
     color: #0f5c66;
+}
+
+@media (max-width: 768px) {
+  .manfaat-card {
+    min-width: 80%;
+  }
 }
 
 /* DOT */
